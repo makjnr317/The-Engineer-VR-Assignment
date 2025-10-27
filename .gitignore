@@ -1,0 +1,21 @@
+# Unity project ignores
+Circuit Builder/[Ll]ibrary/
+Circuit Builder/[Tt]emp/
+Circuit Builder/[Oo]bj/
+Circuit Builder/[Bb]uild/
+Circuit Builder/[Bb]uilds/
+Circuit Builder/[Ll]ogs/
+Circuit Builder/[Uu]serSettings/
+Circuit Builder/[Mm]emoryCaptures/
+
+# Keep package manifests but ignore package cache
+!Circuit Builder/Packages/manifest.json
+!Circuit Builder/Packages/packages-lock.json
+Circuit Builder/Packages/com.unity.package-manager/
+
+# IDE files
+Circuit Builder/.vs/
+Circuit Builder/*.csproj
+Circuit Builder/*.sln
+Circuit Builder/*.user
+Circuit Builder/*.userprefs
