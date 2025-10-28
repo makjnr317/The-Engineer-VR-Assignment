@@ -138,7 +138,7 @@ for comp_name, nodes in component_nodes.items():
         n2 = nodes.get("C")
         v1 = node_voltage(n1, analysis)
         v2 = node_voltage(n2, analysis)
-        v_diff = abs(v1 - v2)
+        v_diff = v1 - v2
 
         if comp_name.startswith("L"):
             status = "ON" if v_diff > LED_THRESHOLD else "OFF"

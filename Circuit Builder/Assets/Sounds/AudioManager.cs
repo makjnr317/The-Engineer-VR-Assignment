@@ -30,17 +30,12 @@ public class AudioManager : MonoBehaviour
     public AudioClip switchclick;
     public AudioClip flipPage;
     public AudioClip snap;
+    public AudioClip button_press;
+    public AudioClip ambience;
 
     private void Start()
     {
-        //Setting up the musicSource for the ambient audio
-        musicSource.clip = fluorescentLights;
-        musicSource.loop = true; //Ambient sounds should loop
-        musicSource.volume = 0f; //Start at zero volume for the fade-in
-        musicSource.Play(); //Start playing
-
-        //Start the fade-in coroutine
-        StartCoroutine(FadeInMusic(ambientFadeIn, ambientVolume));
+        musicSource.PlayOneShot(ambience);
     }
 
     private IEnumerator FadeInMusic(float duration, float targetVolume)
@@ -63,5 +58,10 @@ public class AudioManager : MonoBehaviour
     public void PlayFlipSound()
     {
         SFXSource.PlayOneShot(flipPage);
+    }
+
+    public void playButtonPress()
+    {
+        SFXSource.PlayOneShot(button_press);
     }
 }
